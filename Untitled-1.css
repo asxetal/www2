@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.background{
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav{
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  border: 1px solid #fff;
+  backdrop-filter: blur(50%);
+  background-color: rgba(0,0,0,0.1);
+  width: 120px;
+  height: 100%;
+}
+.logo-icons{
+  background-size: cover;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+}
+.navbar__item{
+  list-style: none;
+}
+.navbar__item--link{
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+i{
+  font-size: 40px;
+  transition: transform 0.3s ease;
+}
+i:hover{
+  transform: scale(1.1);
+}
+.login{
+  color: #fff;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px 30px;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.fa-arrow-right-to-bracket{
+  font-size: 20px;
+  color: #fff;
+}
+.login:hover{
+  transform: scale(1.1);
+}
+.name-game{
+  font-family: "Bokor", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-shadow: 0px 5px 5px #010101;
+}
+.slogan-game{
+  width: 400px;
+  color: #fff;
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  position: absolute;
+  top: 40%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.footer{
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.end{
+  color: #e6e6e6;
+  text-align: center;
+  margin: 20px 0;
+}
+.download{
+  display: flex;
+  justify-content: center;
+  gap: 50px ;
+}
+.download__to--appstore, .download__to--googleplay, .download__to--windows{
+  color: #fff;
+  border: 2px solid #fff;
+  width: 150px;
+  height: 60px;
+  display: flex;
+  text-align: center;
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.fa-apple, .fa-google-play, .fa-windows{
+  margin: 8px 5px;
+}
+.download__to--appstore > h4::before, .download__to--googleplay>h4::before{
+  content: "Download to the  ";
+  font-size: 10px;
+}
+.download__to--googleplay > h4{
+  font-size: 15px;
+}
+.download__to--windows > h4{
+  text-align: center;
+  margin: 12px 0;
+  font-size: 18px;
+}
+.download__to--appstore:hover, .download__to--googleplay:hover, .download__to--windows:hover{
+  animation: 3s ease infinite rotate360;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+@keyframes rotate360 {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1060px) {
+  .background{
+    background-color: #010101;
+    background-image: none;
+    
+  }
+  .nav{
+    width: 60px;
+  }
+  i {
+    font-size: 30px;
+  }
+  .name-game{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .slogan-game{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
