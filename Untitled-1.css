@@ -11,6 +11,17 @@ html{
   font-weight: 400;
   font-style: normal;
 }
+body::-webkit-scrollbar{
+  width: 10px;
+}
+body::-webkit-scrollbar-thumb{
+  background-color: #ccc;
+  height: 50px;
+  border-radius: 100rem;
+}
+body::-webkit-scrollbar-thumb:hover{
+  background-color: #b3b3b3;
+}
 .background{
   background-size: cover;
   background-position: center;
@@ -59,7 +70,7 @@ i:hover{
 .login{
   color: #fff;
   background-color: transparent;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   margin: 10px 30px;
@@ -144,9 +155,93 @@ i:hover{
 }
 .download__to--appstore:hover, .download__to--googleplay:hover, .download__to--windows:hover{
   animation: 3s ease infinite rotate360;
-  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
-
+.container{
+  height: 100vh;
+  padding: 20px;
+  background-image: url(./asset/anime-kimi-no-na-wa-sky-anime-girls-wallpaper-e8169db860307c78b05c21be0842b43a.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+.preview{
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+.container-content{
+  border: 1px solid #fff;
+  max-width: 1000px;
+  height: 350px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: rgba(255,255,255,0.3);
+  position: relative;
+  overflow: hidden;
+}
+.name-char{
+  font-family: "Bokor", system-ui;
+  font-weight: 400;
+  text-align: center;
+  font-size: 40px;
+}
+.name-lucia{
+  width: 100px;
+  height: 100px;
+  border-radius: 100rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  cursor: pointer;
+}
+.name-lucia:hover{
+  animation: 1.5s rotate360 infinite linear;
+}  
+.nametag, .name-char, .plot{
+  color: #fff;
+}
+.nametag{
+  display: block;
+  text-align: center;
+  font-weight: 400;
+}
+.container-content > h3 {
+  margin: 0 20px;
+}
+.plot{
+  display: flex;
+  flex-wrap: wrap;
+}
+.char{
+  position: absolute;
+  z-index: 1;
+  opacity: 0.4;
+  right: 0;
+  top: 0;
+  background-size: cover;
+  background-position: center;
+  height: 447px;
+  width: 997px;
+  border-radius: 12px;
+}
+.constellations{
+  margin: 30px 0;
+  border: 1px solid #fff;
+  border-radius: 12px;
+  max-width: 1000px;
+  height: 100px;
+  color: #fff;
+}
+.icons{
+  /* border: 1px solid #fff; */
+  font-size: 40px;
+  display: flex;
+  justify-content: space-around;
+}
 @keyframes rotate360 {
   0%{
     transform: rotate(0deg);
@@ -160,7 +255,6 @@ i:hover{
   .background{
     background-color: #010101;
     background-image: none;
-    
   }
   .nav{
     width: 60px;
@@ -179,5 +273,8 @@ i:hover{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+  .container-content{
+    min-height: calc(450px + 20px);
   }
 }
