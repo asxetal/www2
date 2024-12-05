@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #e3e3e3;
+}
+.radio-input{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.radio-box-ins, .radio-box-dis, .radio-box-face{
+  width: 100px;
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgb(181,191,217);
+  border-radius: 8px;
+  gap: 20px;
+  padding: 10px;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+  transition: all 0.5s linear;
+}
+.radio-box-ins:hover{
+  border: 2px solid rgb(204,57,164);
+}
+.radio-box-dis:hover{
+  border: 2px solid rgb(140,158,255);
+}
+.radio-box-face:hover{
+  border: 2px solid rgb(3,169,244);
+}
+.radio-box-ins > ion-icon, .radio-box-dis > i, .radio-box-face > ion-icon{
+  font-size: 35px;
+}
+.radio-box-ins > ion-icon{
+  color: rgb(204,57,164);
+}
+.radio-box-dis > i{
+  color: rgb(140,158,255);
+}
+.radio-box-face > ion-icon{
+  color: rgb(3,169,244);
+}
+#ins:checked + .radio-box-ins{
+  background-color: rgb(204,57,164);
+}
+#ins:checked + .radio-box-ins> ion-icon{
+  color: #fff;
+}
+#dis:checked + .radio-box-dis{
+  background-color: rgb(140,158,255);
+}
+#dis:checked + .radio-box-dis > i{
+  color: #fff;
+}
+#face:checked + .radio-box-face{
+  background-color: rgb(3,169,244);
+}
+#face:checked + .radio-box-face > ion-icon{
+  color: #fff;
+}
+.reset{
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Poppins";
+  font-size: 10px;
+}
+.reset > h1{
+  border: 2px solid #fff;
+  color: #3d3d3d;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: inset 10px 10px 15px -3px rgba(0,0,0,0.1);
+  transition: box-shadow 0.5s linear, transform 0.3s ease;
+}
+.reset > h1:hover{
+  transform: scale(1.1);
+}

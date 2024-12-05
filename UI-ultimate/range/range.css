@@ -1,0 +1,32 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #f1f1f1;
+}
+.main{
+  background-color: rgb(245, 73, 144);
+  width: 300px;
+  height: 50px;
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 5px 5px rgba(1,1,1,0.1) ;
+}
+svg{
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  transition: transform .7s ease;
+}
+svg:hover{
+  transform: translateY(-5px);
+}

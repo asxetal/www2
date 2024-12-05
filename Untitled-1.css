@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bokor&display=swap');
-
+:root{
+  --color-text: #fff;
+  --border-color: #fff;
+}
 *{
   margin: 0;
   padding: 0;
@@ -10,6 +13,7 @@ html{
   font-family: "Poppins", serif;
   font-weight: 400;
   font-style: normal;
+  scroll-behavior: smooth;
 }
 body::-webkit-scrollbar{
   width: 10px;
@@ -22,6 +26,7 @@ body::-webkit-scrollbar-thumb{
 body::-webkit-scrollbar-thumb:hover{
   background-color: #b3b3b3;
 }
+/* open */
 .background{
   background-size: cover;
   background-position: center;
@@ -36,7 +41,7 @@ body::-webkit-scrollbar-thumb:hover{
   z-index: 1;
   position: absolute;
   top: 0;
-  border: 1px solid #fff;
+  border: 1px solid var(--border-color);
   backdrop-filter: blur(50%);
   background-color: rgba(0,0,0,0.1);
   width: 120px;
@@ -54,7 +59,7 @@ body::-webkit-scrollbar-thumb:hover{
 }
 .navbar__item--link{
   text-decoration: none;
-  color: #fff;
+  color: var(--color-text);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,13 +73,13 @@ i:hover{
   transform: scale(1.1);
 }
 .login{
-  color: #fff;
+  color: var(--color-text);
   background-color: transparent;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   margin: 10px 30px;
-  border: 1px solid #fff;
+  border: 1px solid var(--border-color);
   padding: 10px 20px;
   border-radius: 8px;
   cursor: pointer;
@@ -82,7 +87,7 @@ i:hover{
 }
 .fa-arrow-right-to-bracket{
   font-size: 20px;
-  color: #fff;
+  color: var(--color-text);
 }
 .login:hover{
   transform: scale(1.1);
@@ -96,12 +101,12 @@ i:hover{
   top: 30%;
   left: 80%;
   transform: translate(-50%, -50%);
-  color: #fff;
+  color: var(--color-text);
   text-shadow: 0px 5px 5px #010101;
 }
 .slogan-game{
   width: 400px;
-  color: #fff;
+  color: var(--color-text);
   font-family: "Poppins", serif;
   font-weight: 400;
   position: absolute;
@@ -127,9 +132,11 @@ i:hover{
   justify-content: center;
   gap: 50px ;
 }
-.download__to--appstore, .download__to--googleplay, .download__to--windows{
-  color: #fff;
-  border: 2px solid #fff;
+.download__to--appstore,
+.download__to--googleplay,
+.download__to--windows{
+  color: var(--color-text);
+  border: 2px solid var(--border-color);
   width: 150px;
   height: 60px;
   display: flex;
@@ -138,10 +145,13 @@ i:hover{
   border-radius: 8px;
   cursor: pointer;
 }
-.fa-apple, .fa-google-play, .fa-windows{
+.fa-apple,
+.fa-google-play,
+.fa-windows{
   margin: 8px 5px;
 }
-.download__to--appstore > h4::before, .download__to--googleplay>h4::before{
+.download__to--appstore > h4::before,
+.download__to--googleplay>h4::before{
   content: "Download to the  ";
   font-size: 10px;
 }
@@ -153,9 +163,12 @@ i:hover{
   margin: 12px 0;
   font-size: 18px;
 }
-.download__to--appstore:hover, .download__to--googleplay:hover, .download__to--windows:hover{
+.download__to--appstore:hover,
+.download__to--googleplay:hover,
+.download__to--windows:hover{
   animation: 3s ease infinite rotate360;
 }
+/* trang1 */
 .container{
   height: 100vh;
   padding: 20px;
@@ -164,23 +177,34 @@ i:hover{
   background-position: center;
   width: 100%;
   height: 100vh;
+  position: relative;
 }
 .preview{
-  color: #fff;
+  color: var(--color-text);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 20px 0;
 }
 .container-content{
-  border: 1px solid #fff;
+  border: 1px solid var(--border-color);
   max-width: 1000px;
   height: 350px;
   padding: 10px 20px;
-  border-radius: 20px;
+  border-radius: 5px;
   background-color: rgba(255,255,255,0.3);
   position: relative;
-  overflow: hidden;
+  overflow: auto;
+}
+.container-content::-webkit-scrollbar{
+  width: 10px;
+  border-radius: 100rem;
+  background-color: #fff;
+}
+.container-content::-webkit-scrollbar-thumb{
+  height: 30px;
+  background-color: rgb(189, 1, 1);
+  border-radius: 100rem;
 }
 .name-char{
   font-family: "Bokor", system-ui;
@@ -197,12 +221,11 @@ i:hover{
   right: 0;
   margin: 20px;
   cursor: pointer;
-}
-.name-lucia:hover{
-  animation: 1.5s rotate360 infinite linear;
 }  
-.nametag, .name-char, .plot{
-  color: #fff;
+.nametag,
+.name-char,
+.plot{
+  color: var(--color-text);
 }
 .nametag{
   display: block;
@@ -213,6 +236,7 @@ i:hover{
   margin: 0 20px;
 }
 .plot{
+  max-height: 300px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -230,18 +254,92 @@ i:hover{
 }
 .constellations{
   margin: 30px 0;
-  border: 1px solid #fff;
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   max-width: 1000px;
   height: 100px;
-  color: #fff;
+  color: var(--color-text);
+  text-align: center;
+  background-color: rgba(255,255,255,0.3);
 }
 .icons{
-  /* border: 1px solid #fff; */
   font-size: 40px;
   display: flex;
   justify-content: space-around;
+  cursor: pointer;
 }
+ion-icon{
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  border-radius: 100rem;
+}
+/* trang2 */
+.character{
+  width: 100%;
+  height: 100vh;
+  background: #3e3e3e;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.char1,
+.char2,
+.char3{
+  width: 300px;
+  height: 400px;
+  border: 2px solid var(--border-color);
+  overflow: hidden;
+  margin-top: 100px;
+  margin-left: 70px;
+}
+.char1 img,
+.char2 img,
+.char3 img{
+  width: 300px;
+  border: 1px solid var(--border-color);
+  transition: display .3s linear;
+  overflow: hidden;
+}
+.char1 span,
+.char2 span,
+.char3 span{
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid var(--border-color); */
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.char1:hover img,
+.char2:hover img,
+.char3:hover img{
+  position: absolute;
+  opacity: .5;
+  overflow: hidden;
+}
+.character > span{
+  color: #fff;
+  position: absolute;
+  left: 45%;
+  margin: 10px 0;
+  font-size: 30px;
+}
+.char1 p,
+.char2 p,
+.char3 p{
+  width: 300px;
+  position: absolute;
+  transform: translateY(-300px);
+  color: var(--color-text);
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+.char1:hover p,
+.char2:hover p,
+.char3:hover p{
+  opacity: 1;
+  transform: translateY(0);
+}
+/* keyframes */
 @keyframes rotate360 {
   0%{
     transform: rotate(0deg);
@@ -250,7 +348,7 @@ i:hover{
     transform: rotate(360deg);
   }
 }
-
+/* media */
 @media (max-width: 1060px) {
   .background{
     background-color: #010101;
@@ -276,5 +374,11 @@ i:hover{
   }
   .container-content{
     min-height: calc(450px + 20px);
+  }
+  .constellations{
+    display: none;
+  }
+  .skill{
+    display: none;
   }
 }
